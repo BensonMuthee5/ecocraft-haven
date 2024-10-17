@@ -26,7 +26,7 @@ function renderProducts(productList) {
             <div class="product-card">
                 <img src="${product.img}" alt="${product.name}">
                 <h3>${product.name}</h3>
-                <p>$${product.price.toFixed(2)}</p>
+                <p>Ksh ${product.price.toFixed(2)}</p>
                 <button class="btn-secondary" onclick="addToCart(${product.id})">Add to Cart</button>
             </div>
         `;
@@ -168,3 +168,45 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+// Fading the hero section on scroll
+window.addEventListener('scroll', function() {
+    const scrollPos = window.scrollY;
+    const heroSection = document.querySelector('.hero'); // Target the hero section
+    const windowHeight = window.innerHeight;
+
+    // Adjust opacity based on scroll position
+    const maxOpacity = 1; // Maximum opacity you want to maintain
+    const fadeStart = 0; // Start fading at this scroll position (in pixels)
+    const fadeEnd = windowHeight; // End fading at this scroll position (in pixels)
+
+    // Calculate opacity
+    let opacity;
+    if (scrollPos < fadeStart) {
+        opacity = maxOpacity;
+    } else if (scrollPos >= fadeStart && scrollPos <= fadeEnd) {
+        opacity = maxOpacity - ((scrollPos - fadeStart) / (fadeEnd - fadeStart)) * maxOpacity;
+    } else {
+        opacity = 0; // Fully transparent after the fade ends
+    }
+    
+    heroSection.style.opacity = opacity;
+});
+// Show or hide the return to top button based on scroll position
+window.addEventListener('scroll', function() {
+    const returnToTopButton = document.getElementById('return-to-top');
+    const scrollPos = window.scrollY;
+
+    if (scrollPos > 200) { // Adjust the scroll position as needed
+        returnToTopButton.style.display = 'block';
+        returnToTopButton.style.backgroundColor = 'coral'; // Set background color to coral
+    } else {
+        returnToTopButton.style.display = 'none';
+    }
+});
+
+// Set initial state of the return to top button on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const returnToTopButton = document.getElementById('return-to-top');
+    returnToTopButton.style.display = 'none'; // Hide button on page load
+});
+

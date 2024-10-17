@@ -84,40 +84,46 @@ header nav ul li a:hover {
 .hero {
     background-color: #333; /* Dark grey background */
     color: #fff; /* White text */
-    padding: 100px 0;
-    text-align: center;
-    background-image: url('images/bac2.jpg'); /* Background image */
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.3s ease; 
-    opacity: 1; 
+    padding: 100px 0; /* Adjust padding for top and bottom */
+    text-align: center; /* Center text */
+    background-image: url('images/bac2.jpg'); /* Hero background image */
+    background-size: cover; /* Cover the entire hero section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Makes the background image stationary */
+    transition: opacity 0.3s ease; /* Smooth transition for fading effect */
 }
 
-
-.hero h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
+/* Button Styling */
 .hero .btn-primary {
-    background-color: #FF6F61; /* Coral for primary buttons */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+    background-color: coral; /* Coral button background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+    margin-top: 20px; /* Add space above the button */
 }
 
 .hero .btn-primary:hover {
-    background-color: #e85c50; /* Darker coral on hover */
+    background-color: #333; /* Dark grey background on hover */
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .hero {
+        padding: 80px 0; /* Adjust padding for smaller screens */
+    }
+
+    .hero .btn-primary {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-top: 15px; /* Adjust margin for smaller screens */
+    }
+}
+
 
 /* Products Section */
 .products-section {
@@ -396,24 +402,32 @@ footer p {
         padding: 10px;
     }
 }
+/* Return to Top button */
 #return-to-top {
     position: fixed;
     bottom: 30px; /* Distance from the bottom of the page */
     right: 20px;  /* Distance from the right side of the page */
     background-color: coral; /* Coral background color */
     color: white; /* White arrow color */
-    padding: 10px; /* Small button size */
+    border: none;
     border-radius: 50%; /* Circle button */
-    font-size: 20px; /* Adjust arrow size */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    font-size: 20px; /* Adjust icon size */
     cursor: pointer;
+    display: none; /* Initially hide the button */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     opacity: 0.6; /* Slight transparency to make it subtle */
-    transition: opacity 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
     z-index: 100; /* Ensure it floats above other elements */
 }
 
 #return-to-top:hover {
+    background-color: #333; /* Dark grey on hover */
     opacity: 1; /* Full opacity on hover */
 }
+
 /* Container for floating buttons */
 .floating-buttons {
     position: fixed;
@@ -422,27 +436,6 @@ footer p {
     display: flex;
     gap: 10px; /* Space between the buttons */
     z-index: 100;
-}
-
-/* Return to Top button */
-#return-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 55px;
-    background-color: coral;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 100;
-    transition: background-color 0.3s ease;
-}
-
-#return-to-top:hover {
-    background-color: #e85c50; /* Darker coral on hover */
 }
 
 /* WhatsApp button */
