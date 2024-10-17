@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Welcome to EcoCraft Haven. Shop handmade, eco-friendly, and unique items.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>EcoCraft Haven</title>
+
+    <!-- Link to external stylesheets like CSS/Bootstrap (will be added later) -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/ecocraft.png" alt="" class="logo-img">
+                <h1>EcoCraft Haven</h1>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="cart-icon" id="cart-icon">
+                        <a href="#cart" title="View Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-icon-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>EcoCraft Haven</h2>
+            <p>Discover handmade, eco-friendly, and unique items tailored just for you.</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Individual product cards will go here -->
+                <div class="product-card">
+                    <img src="" alt="Product 1">
+                    <h3>Product Name 1</h3>
+                    <p>$29.99</p>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product Name 2</h3>
+                    <p>$19.99</p>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+
+                <!-- Repeat for more products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are passionate about providing unique, eco-friendly, and handmade products that cater to your personal style and values. Our mission is to connect artisans and conscious consumers.</p>
+        </div>
+    </section>
+
+    <!-- Subscription Section (Optional for subscription-based platforms) -->
+    <section id="subscription" class="subscription-section">
+        <div class="container">
+            <h2>Join Our Subscription Box</h2>
+            <p>Get handpicked, eco-friendly items delivered to your doorstep every month. Subscribe now and enjoy special discounts and exclusive items!</p>
+            <form class="subscription-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Feel free to reach out to us!</p>
+            <form action="formspree-endpoint" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating buttons -->
+<button id="return-to-top" onclick="scrollToTop()">&#8679;</button>
+
+<a href="https://wa.me/+254708035693" target="_blank" id="whatsapp-button">
+    <i class="fab fa-whatsapp"></i> Talk to us
+</a>
+
+    
+    
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 EcoCraft Haven. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+
+</body>
+</html>

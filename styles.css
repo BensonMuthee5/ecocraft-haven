@@ -1,0 +1,498 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #000; 
+    color: #fff; 
+    padding: 20px 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; 
+}
+
+header .logo-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav {
+    float: right;
+    display: flex;
+    justify-content: space-between; /* Align menu and business name */
+    align-items: center; /* Vertically center the items */
+}
+
+header nav ul {
+    display: flex; /* Flexbox for menu items */
+    list-style: none;
+    gap: 20px; /* Space between menu items */
+    padding: 10px 0; /* Add padding to push links up */
+}
+header nav ul li {
+    margin: -5px 0; /* Use a negative margin to pull links upwards */
+    line-height: 1.5; 
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+header nav ul li a:hover {
+    color: #FF6F61; /* Coral for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333; /* Dark grey background */
+    color: #fff; /* White text */
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('images/bac2.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease; 
+    opacity: 1; 
+}
+
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .btn-primary {
+    background-color: #FF6F61; /* Coral for primary buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e85c50; /* Darker coral on hover */
+}
+
+/* Products Section */
+.products-section {
+    padding: 60px 0;
+}
+
+.products-section h2 {
+    text-align: center;
+    color: #000; /* Black for section headings */
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #000; /* Black product name */
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #FF6F61; /* Coral price */
+    font-size: 16px;
+}
+
+.product-card .btn-secondary {
+    background-color: #000; /* Black for secondary buttons */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn-secondary:hover {
+    background-color: #333; /* Dark grey on hover */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Section */
+.about-section {
+    padding: 60px 0;
+    background-color: #fff; 
+}
+
+.about-section h2,
+.subscription-section h2,
+.contact-section h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.about-section p,
+.subscription-section p,
+.contact-section p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Subscription Section */
+.subscription-section {
+    padding: 60px 0;
+    background-color: #FF6F61; /* Coral background */
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    width: 300px; /* Original width for larger screens */
+    border: none;
+    margin-right: 10px;
+    font-size: 16px; /* Original font size */
+    border-radius: 5px;
+}
+
+.subscription-form button {
+    padding: 10px 20px; /* Original padding */
+    background-color: #000; /* Black button */
+    color: #fff;
+    border: none;
+    font-size: 16px; /* Original font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #333; /* Dark grey on hover */
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 600px) {
+    .subscription-form {
+        display: flex;
+        flex-direction: column; /* Stack the input and button vertically */
+        align-items: center;    /* Center align the elements */
+    }
+
+    .subscription-form input[type="email"] {
+        width: 80%; /* Set a reasonable width for the input field on small screens */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+
+    .subscription-form button {
+        width: 30%; 
+        padding: 8px 16px; 
+        font-size: 14px; 
+        margin-bottom: 10px; 
+        border-radius: 10%;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f7f7f7; /* Light grey background */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Coral button */
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e85c50; /* Darker coral on hover */
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+footer .footer-social a:hover img {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block; /* Stack the menu items vertically */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    /* Center the logo and cart icon */
+    .logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cart-icon {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    /* Adjust product grid for small screens */
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    /* Ensure footer and social media icons align properly */
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Cart icon styling */
+.cart-icon {
+    font-size: 24px;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: coral;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+@media (max-width: 600px) {
+    /* Ensure all elements adjust for very small screens */
+    .your-element {
+        width: 100%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    /* Adjust menu font size */
+    .menu {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+#return-to-top {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom of the page */
+    right: 20px;  /* Distance from the right side of the page */
+    background-color: coral; /* Coral background color */
+    color: white; /* White arrow color */
+    padding: 10px; /* Small button size */
+    border-radius: 50%; /* Circle button */
+    font-size: 20px; /* Adjust arrow size */
+    cursor: pointer;
+    opacity: 0.6; /* Slight transparency to make it subtle */
+    transition: opacity 0.3s ease; /* Smooth hover effect */
+    z-index: 100; /* Ensure it floats above other elements */
+}
+
+#return-to-top:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+/* Container for floating buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    z-index: 100;
+}
+
+/* Return to Top button */
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 55px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+#return-to-top:hover {
+    background-color: #e85c50; /* Darker coral on hover */
+}
+
+/* WhatsApp button */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+#whatsapp-button i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#whatsapp-button:hover {
+    background-color: #20b857; /* Darker WhatsApp green on hover */
+}
+/* Footer Social Media Icons */
+footer .footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+    color: coral; /* Coral color for icons */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+footer .footer-social a:hover {
+    color: white; /* White color on hover */
+}
+
+footer .footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: fade effect on hover */
+footer .footer-social a:hover img {
+    opacity: 0.7;
+}
+
+
+
